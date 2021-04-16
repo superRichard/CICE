@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService?wsdl" filename="OperacionEntradaService.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService?xsd=1" filename="OperacionEntradaService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService?xsd=1" filename="OperacionEntradaService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService?wsdl" filename="OperacionEntradaService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService?wsdl=1" filename="OperacionEntradaService0.wsdl" />
   </Results>
 </DiscoveryClientResultsFile>

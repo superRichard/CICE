@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx" targetNamespace="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://189.206.60.116:443/OperacionEntradaImpl/OperacionEntradaService?xsd=1" namespace="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx" />
+    </xsd:schema>
+  </types>
+  <message name="ingresoSimple">
+    <part name="parameters" element="tns:ingresoSimple" />
+  </message>
+  <message name="ingresoSimpleResponse">
+    <part name="parameters" element="tns:ingresoSimpleResponse" />
+  </message>
+  <message name="ingresoParcial">
+    <part name="parameters" element="tns:ingresoParcial" />
+  </message>
+  <message name="ingresoParcialResponse">
+    <part name="parameters" element="tns:ingresoParcialResponse" />
+  </message>
+  <message name="ingresoNoManifestado">
+    <part name="parameters" element="tns:ingresoNoManifestado" />
+  </message>
+  <message name="ingresoNoManifestadoResponse">
+    <part name="parameters" element="tns:ingresoNoManifestadoResponse" />
+  </message>
+  <message name="salidaPedimento">
+    <part name="parameters" element="tns:salidaPedimento" />
+  </message>
+  <message name="salidaPedimentoResponse">
+    <part name="parameters" element="tns:salidaPedimentoResponse" />
+  </message>
+  <message name="confirmacionDeSalida">
+    <part name="parameters" element="tns:confirmacionDeSalida" />
+  </message>
+  <message name="confirmacionDeSalidaResponse">
+    <part name="parameters" element="tns:confirmacionDeSalidaResponse" />
+  </message>
+  <message name="ingresosParciales">
+    <part name="parameters" element="tns:ingresosParciales" />
+  </message>
+  <message name="ingresosParcialesResponse">
+    <part name="parameters" element="tns:ingresosParcialesResponse" />
+  </message>
+  <portType name="OperacionEntradaRemote">
+    <operation name="ingresoSimple">
+      <input xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata" ns1:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoSimpleRequest" message="tns:ingresoSimple" />
+      <output xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata" ns2:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoSimpleResponse" message="tns:ingresoSimpleResponse" />
+    </operation>
+    <operation name="ingresoParcial">
+      <input xmlns:ns3="http://www.w3.org/2007/05/addressing/metadata" ns3:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoParcialRequest" message="tns:ingresoParcial" />
+      <output xmlns:ns4="http://www.w3.org/2007/05/addressing/metadata" ns4:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoParcialResponse" message="tns:ingresoParcialResponse" />
+    </operation>
+    <operation name="ingresoNoManifestado">
+      <input xmlns:ns5="http://www.w3.org/2007/05/addressing/metadata" ns5:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoNoManifestadoRequest" message="tns:ingresoNoManifestado" />
+      <output xmlns:ns6="http://www.w3.org/2007/05/addressing/metadata" ns6:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresoNoManifestadoResponse" message="tns:ingresoNoManifestadoResponse" />
+    </operation>
+    <operation name="salidaPedimento">
+      <input xmlns:ns7="http://www.w3.org/2007/05/addressing/metadata" ns7:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/salidaPedimentoRequest" message="tns:salidaPedimento" />
+      <output xmlns:ns8="http://www.w3.org/2007/05/addressing/metadata" ns8:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/salidaPedimentoResponse" message="tns:salidaPedimentoResponse" />
+    </operation>
+    <operation name="confirmacionDeSalida">
+      <input xmlns:ns9="http://www.w3.org/2007/05/addressing/metadata" ns9:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/confirmacionDeSalidaRequest" message="tns:confirmacionDeSalida" />
+      <output xmlns:ns10="http://www.w3.org/2007/05/addressing/metadata" ns10:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/confirmacionDeSalidaResponse" message="tns:confirmacionDeSalidaResponse" />
+    </operation>
+    <operation name="ingresosParciales">
+      <input xmlns:ns11="http://www.w3.org/2007/05/addressing/metadata" ns11:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresosParcialesRequest" message="tns:ingresosParciales" />
+      <output xmlns:ns12="http://www.w3.org/2007/05/addressing/metadata" ns12:Action="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx/OperacionEntradaRemote/ingresosParcialesResponse" message="tns:ingresosParcialesResponse" />
+    </operation>
+  </portType>
+</definitions>

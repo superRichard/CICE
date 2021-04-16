@@ -136,7 +136,7 @@ namespace SIRA_Notificaciones
             //Console.WriteLine("timerActivo -> " + configuracionNotificador.timerActivo.ToString());
 
             //Antes de asignar valores, si existe el objeto lo detenemos y matamos
-            StopTimer();
+            //StopTimer();
 
             //Creamos y asiganamos valores al TIMER
             timer = new System.Timers.Timer(configuracionNotificador.timerIntervalo);
@@ -144,11 +144,9 @@ namespace SIRA_Notificaciones
             timer.AutoReset = true;
             timer.Enabled = configuracionNotificador.timerActivo;
             siraPeticiones s = new siraPeticiones();
-            s.pruebaSimple();
-            //s.IngresoSinID();
-            //s.IngresoParcial();
-            //s.IngresoFlujoAlterno();            
-            s.Rechazo();
+            //s.pruebaSimple(); // prueba de ingreso simple
+            s.IngresoSinID();
+            s.IngresoParcial();
         }
 
         public static void StopTimer() {
@@ -189,24 +187,24 @@ namespace SIRA_Notificaciones
                 {
                     case "ingresoSimple":
                         siraPeticion.IngresoSimple();
-                        Console.WriteLine("---> Ejecuto ingresoSimple");
+                        Console.WriteLine("---> Ejecutó ingresoSimple");
                         break;
-                    //case "ingresoParcial":
-                    //    siraPeticion.IngresoParcial();
-                    //    Console.WriteLine("---> Ejecuto ingresoParcial");
-                    //    break;
-                    //case "ingresoSinID":
-                    //    siraPeticion.IngresoSinID();
-                    //    Console.WriteLine("---> Ejecuto ingresoSinID");
-                    //    break;
-                    //case "ingresoFlujoAlterno":
-                    //    siraPeticion.IngresoFlujoAlterno();
-                    //    Console.WriteLine("---> Ejecuto ingresoFlujoAlterno");
-                    //    break;
-                    //case "rechazo":
-                    //    siraPeticion.Rechazo();
-                    //    Console.WriteLine("---> Ejecuto rechazo");
-                        break;                        
+                        //case "ingresoParcial":
+                        //    siraPeticion.IngresoParcial();
+                        //    Console.WriteLine("---> Ejecutó ingresoParcial");
+                        //    break;
+                        //case "ingresoSinID":
+                        //    siraPeticion.IngresoSinID();
+                        //    Console.WriteLine("---> Ejecutó ingresoSinID");
+                        //    break;
+                        //case "ingresoFlujoAlterno":
+                        //    siraPeticion.IngresoFlujoAlterno();
+                        //    Console.WriteLine("---> Ejecutó ingresoFlujoAlterno");
+                        //    break;
+                        //case "rechazo":
+                        //    siraPeticion.Rechazo();
+                        //    Console.WriteLine("---> Ejecutó rechazo");
+                        //break;                        
                     default:
                         break;
                 }

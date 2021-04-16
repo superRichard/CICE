@@ -216,11 +216,12 @@
     <None Include="Web References\wsSira\OperacionEntradaService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\wsSira\OperacionEntradaService0.wsdl" />
     <None Include="Web References\wsSira\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wsSira\Respuesta.datasource">
+    <None Include="Web References\wsSira\respuesta1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
@@ -320,10 +321,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService%3fwsdl">
+    <WebReferenceUrl Include="https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\wsSira\</RelPath>
-      <UpdateFromURL>https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

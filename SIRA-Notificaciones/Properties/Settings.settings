@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="SIRA_Notificaciones_wsSira_OperacionEntradaService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService</Value>
+      <Value Profile="(Default)">https://189.206.60.116:8102/OperacionEntradaImpl/OperacionEntradaService</Value>
     </Setting>
     <Setting Name="SIRA_Notificaciones_wsSiraManifiestos_ConsultaManifestService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://201.151.252.116:8102/recintos/ConsultaManifiestos</Value>

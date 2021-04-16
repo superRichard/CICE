@@ -1,206 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service.common.www.ventanillaunica.gob.mx/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="OperacionEntradaService" targetNamespace="http://service.common.www.ventanillaunica.gob.mx/" xmlns="http://schemas.xmlsoap.org/wsdl/">
-  <types>
-    <xsd:schema>
-      <xsd:import schemaLocation="https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService?xsd=1" namespace="http://service.common.www.ventanillaunica.gob.mx/" />
-    </xsd:schema>
-  </types>
-  <message name="notificacionIngresoMercancia">
-    <part name="parameters" element="tns:notificacionIngresoMercancia" />
-  </message>
-  <message name="notificacionIngresoMercanciaResponse">
-    <part name="parameters" element="tns:notificacionIngresoMercanciaResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="ingresoSinID">
-    <part name="parameters" element="tns:ingresoSinID" />
-  </message>
-  <message name="ingresoSinIDResponse">
-    <part name="parameters" element="tns:ingresoSinIDResponse" />
-  </message>
-  <message name="ingresoSimple">
-    <part name="parameters" element="tns:ingresoSimple" />
-  </message>
-  <message name="ingresoSimpleResponse">
-    <part name="parameters" element="tns:ingresoSimpleResponse" />
-  </message>
-  <message name="ingresoParcial">
-    <part name="parameters" element="tns:ingresoParcial" />
-  </message>
-  <message name="ingresoParcialResponse">
-    <part name="parameters" element="tns:ingresoParcialResponse" />
-  </message>
-  <message name="rechazo">
-    <part name="parameters" element="tns:rechazo" />
-  </message>
-  <message name="rechazoResponse">
-    <part name="parameters" element="tns:rechazoResponse" />
-  </message>
-  <message name="ingresoFlujoAlterno">
-    <part name="parameters" element="tns:ingresoFlujoAlterno" />
-  </message>
-  <message name="ingresoFlujoAlternoResponse">
-    <part name="parameters" element="tns:ingresoFlujoAlternoResponse" />
-  </message>
-  <message name="salidaPedimento">
-    <part name="parameters" element="tns:salidaPedimento" />
-  </message>
-  <message name="salidaPedimentoResponse">
-    <part name="parameters" element="tns:salidaPedimentoResponse" />
-  </message>
-  <message name="desconsolidacionMaster">
-    <part name="parameters" element="tns:desconsolidacionMaster" />
-  </message>
-  <message name="desconsolidacionMasterResponse">
-    <part name="parameters" element="tns:desconsolidacionMasterResponse" />
-  </message>
-  <message name="consolidacionMaster">
-    <part name="parameters" element="tns:consolidacionMaster" />
-  </message>
-  <message name="consolidacionMasterResponse">
-    <part name="parameters" element="tns:consolidacionMasterResponse" />
-  </message>
-  <message name="subdivisionMercancia">
-    <part name="parameters" element="tns:subdivisionMercancia" />
-  </message>
-  <message name="subdivisionMercanciaResponse">
-    <part name="parameters" element="tns:subdivisionMercanciaResponse" />
-  </message>
-  <message name="traspaleoContenedor">
-    <part name="parameters" element="tns:traspaleoContenedor" />
-  </message>
-  <message name="traspaleoContenedorResponse">
-    <part name="parameters" element="tns:traspaleoContenedorResponse" />
-  </message>
-  <message name="incidenciaMercancia">
-    <part name="parameters" element="tns:incidenciaMercancia" />
-  </message>
-  <message name="incidenciaMercanciaResponse">
-    <part name="parameters" element="tns:incidenciaMercanciaResponse" />
-  </message>
-  <message name="salidaTransferencia">
-    <part name="parameters" element="tns:salidaTransferencia" />
-  </message>
-  <message name="salidaTransferenciaResponse">
-    <part name="parameters" element="tns:salidaTransferenciaResponse" />
-  </message>
-  <message name="ceAgregacionMercancia">
-    <part name="parameters" element="tns:ceAgregacionMercancia" />
-  </message>
-  <message name="ceAgregacionMercanciaResponse">
-    <part name="parameters" element="tns:ceAgregacionMercanciaResponse" />
-  </message>
-  <message name="ceDesagregacionMercancia">
-    <part name="parameters" element="tns:ceDesagregacionMercancia" />
-  </message>
-  <message name="ceDesagregacionMercanciaResponse">
-    <part name="parameters" element="tns:ceDesagregacionMercanciaResponse" />
-  </message>
-  <portType name="OperacionEntrada">
-    <operation name="notificacionIngresoMercancia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/notificacionIngresoMercanciaRequest" message="tns:notificacionIngresoMercancia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/notificacionIngresoMercanciaResponse" message="tns:notificacionIngresoMercanciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/notificacionIngresoMercancia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ingresoSinID">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSinIDRequest" message="tns:ingresoSinID" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSinIDResponse" message="tns:ingresoSinIDResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSinID/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ingresoSimple">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSimpleRequest" message="tns:ingresoSimple" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSimpleResponse" message="tns:ingresoSimpleResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoSimple/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ingresoParcial">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoParcialRequest" message="tns:ingresoParcial" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoParcialResponse" message="tns:ingresoParcialResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoParcial/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="rechazo">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/rechazoRequest" message="tns:rechazo" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/rechazoResponse" message="tns:rechazoResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/rechazo/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ingresoFlujoAlterno">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoFlujoAlternoRequest" message="tns:ingresoFlujoAlterno" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoFlujoAlternoResponse" message="tns:ingresoFlujoAlternoResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ingresoFlujoAlterno/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="salidaPedimento">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaPedimentoRequest" message="tns:salidaPedimento" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaPedimentoResponse" message="tns:salidaPedimentoResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaPedimento/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="desconsolidacionMaster">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/desconsolidacionMasterRequest" message="tns:desconsolidacionMaster" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/desconsolidacionMasterResponse" message="tns:desconsolidacionMasterResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/desconsolidacionMaster/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="consolidacionMaster">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/consolidacionMasterRequest" message="tns:consolidacionMaster" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/consolidacionMasterResponse" message="tns:consolidacionMasterResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/consolidacionMaster/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="subdivisionMercancia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/subdivisionMercanciaRequest" message="tns:subdivisionMercancia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/subdivisionMercanciaResponse" message="tns:subdivisionMercanciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/subdivisionMercancia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="traspaleoContenedor">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/traspaleoContenedorRequest" message="tns:traspaleoContenedor" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/traspaleoContenedorResponse" message="tns:traspaleoContenedorResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/traspaleoContenedor/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="incidenciaMercancia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/incidenciaMercanciaRequest" message="tns:incidenciaMercancia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/incidenciaMercanciaResponse" message="tns:incidenciaMercanciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/incidenciaMercancia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="salidaTransferencia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaTransferenciaRequest" message="tns:salidaTransferencia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaTransferenciaResponse" message="tns:salidaTransferenciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/salidaTransferencia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ceAgregacionMercancia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceAgregacionMercanciaRequest" message="tns:ceAgregacionMercancia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceAgregacionMercanciaResponse" message="tns:ceAgregacionMercanciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceAgregacionMercancia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="ceDesagregacionMercancia">
-      <input wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceDesagregacionMercanciaRequest" message="tns:ceDesagregacionMercancia" />
-      <output wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceDesagregacionMercanciaResponse" message="tns:ceDesagregacionMercanciaResponse" />
-      <fault wsam:Action="http://service.common.www.ventanillaunica.gob.mx/OperacionEntrada/ceDesagregacionMercancia/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-  </portType>
-  <binding name="OperacionEntradaPortBinding" type="tns:OperacionEntrada">
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service.common.www.ventanillaunica.gob.mx/" xmlns:wssutil="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="OperacionEntradaService" targetNamespace="http://service.common.www.ventanillaunica.gob.mx/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsingPolicy wssutil:Required="true" />
+  <wsp1_2:Policy wssutil:Id="Wssp1.2-2007-Https-UsernameToken-Plain.xml">
+    <ns1:TransportBinding xmlns:ns1="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+      <wsp1_2:Policy>
+        <ns1:TransportToken>
+          <wsp1_2:Policy>
+            <ns1:HttpsToken />
+          </wsp1_2:Policy>
+        </ns1:TransportToken>
+        <ns1:AlgorithmSuite>
+          <wsp1_2:Policy>
+            <ns1:Basic256 />
+          </wsp1_2:Policy>
+        </ns1:AlgorithmSuite>
+        <ns1:Layout>
+          <wsp1_2:Policy>
+            <ns1:Lax />
+          </wsp1_2:Policy>
+        </ns1:Layout>
+        <ns1:IncludeTimestamp />
+      </wsp1_2:Policy>
+    </ns1:TransportBinding>
+    <ns2:SupportingTokens xmlns:ns2="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+      <wsp1_2:Policy>
+        <ns2:UsernameToken ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+          <wsp1_2:Policy>
+            <ns2:WssUsernameToken10 />
+          </wsp1_2:Policy>
+        </ns2:UsernameToken>
+      </wsp1_2:Policy>
+    </ns2:SupportingTokens>
+  </wsp1_2:Policy>
+  <import namespace="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx" location="https://189.206.60.116:443/OperacionEntradaImpl/OperacionEntradaService?wsdl=1" />
+  <types />
+  <binding xmlns:ns3="http://ws.ingresosimple.recintos.www.ventanillaunica.gob.mx" name="OperacionEntradaPortBinding" type="ns3:OperacionEntradaRemote">
+    <wsp:PolicyReference URI="#Wssp1.2-2007-Https-UsernameToken-Plain.xml" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="notificacionIngresoMercancia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="ingresoSinID">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="ingresoSimple">
       <soap:operation soapAction="" />
       <input>
@@ -209,9 +45,6 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
     <operation name="ingresoParcial">
       <soap:operation soapAction="" />
@@ -221,11 +54,8 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
-    <operation name="rechazo">
+    <operation name="ingresoNoManifestado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -233,21 +63,6 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="ingresoFlujoAlterno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
     <operation name="salidaPedimento">
       <soap:operation soapAction="" />
@@ -257,11 +72,8 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
-    <operation name="desconsolidacionMaster">
+    <operation name="confirmacionDeSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -269,11 +81,8 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
-    <operation name="consolidacionMaster">
+    <operation name="ingresosParciales">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -281,86 +90,11 @@
       <output>
         <soap:body use="literal" />
       </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="subdivisionMercancia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="traspaleoContenedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="incidenciaMercancia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="salidaTransferencia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="ceAgregacionMercancia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="ceDesagregacionMercancia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
     </operation>
   </binding>
   <service name="OperacionEntradaService">
     <port name="OperacionEntradaPort" binding="tns:OperacionEntradaPortBinding">
-      <soap:address location="https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService" />
+      <soap:address location="https://189.206.60.116:8102/OperacionEntradaImpl/OperacionEntradaService" />
     </port>
   </service>
 </definitions>

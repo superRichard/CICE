@@ -12,7 +12,7 @@ namespace SIRA_Notificaciones.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,7 @@ namespace SIRA_Notificaciones.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://189.206.60.116:8102/OperacionEntradaImpl/OperacionEntradaService")]
         public string SIRA_Notificaciones_wsSira_OperacionEntradaService {
             get {
                 return ((string)(this["SIRA_Notificaciones_wsSira_OperacionEntradaService"]));

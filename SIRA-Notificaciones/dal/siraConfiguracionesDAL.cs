@@ -171,7 +171,8 @@ namespace SIRA_Notificaciones.dal
                 vTimeOutBD      = 15;
                 vTimeOutWS      = 15;
                 vUrlWSRecinto   = "https://www.grupocice.com/serviciosgf2/Sira/OperacionEntradaService?wsdl";
-                vUrlSira        = "https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService?wsdl";
+                //vUrlSira        = "https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService?wsdl";
+                vUrlSira        = "https://189.206.60.116/OperacionEntradaImpl/OperacionEntradaService?wsdl";
                 vTimerWS        = 1;
 
                 configuracionNotificador.timerActivo = vStatusNotificador;
