@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIRA_Notificaciones.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SIRA_Notificaciones_wsSira_OperacionEntradaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://201.151.252.116:8101/OperacionEntradaImpl/OperacionEntradaService</Value>
+    </Setting>
+    <Setting Name="SIRA_Notificaciones_wsSiraManifiestos_ConsultaManifestService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://201.151.252.116:8102/recintos/ConsultaManifiestos</Value>
+    </Setting>
+    <Setting Name="SIRA_Notificaciones_wsSiraGuias_ConsultaetalleManifestService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://201.151.252.116:8102/recintos/ConsultaDetalleGuia</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
