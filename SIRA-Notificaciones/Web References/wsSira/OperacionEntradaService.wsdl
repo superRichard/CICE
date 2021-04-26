@@ -46,7 +46,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ingresoParcial">
+    <operation name="ingresoNoManifestado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -55,7 +55,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ingresoNoManifestado">
+    <operation name="ingresoParcial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -94,7 +94,7 @@
   </binding>
   <service name="OperacionEntradaService">
     <port name="OperacionEntradaPort" binding="tns:OperacionEntradaPortBinding">
-      <soap:address location="https://189.206.60.116:8102/OperacionEntradaImpl/OperacionEntradaService" />
+      <soap:address location="https://189.206.60.116:8104/OperacionEntradaImpl/OperacionEntradaService" />
     </port>
   </service>
 </definitions>

@@ -6,6 +6,9 @@ using System.Net;
 using System.Text;
 using SIRA_Notificaciones.wsSira;
 using Microsoft.Web.Services3.Security.Tokens;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+
 namespace SIRA_Notificaciones.dal
 {
     class siraPeticiones
@@ -28,6 +31,7 @@ namespace SIRA_Notificaciones.dal
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             ICredentials credentials = new NetworkCredential("MAR870122MX9", "i1yzMzAa3RvVgMzNAmTnL0hvVmSRTYDOpmuTrO0+REFMnCTj+k+LFHmZRtgkMkEq", "https://*");
             ws.Credentials = credentials;
+            
             UsernameToken token = new UsernameToken("MAR870122MX9", "i1yzMzAa3RvVgMzNAmTnL0hvVmSRTYDOpmuTrO0+REFMnCTj+k+LFHmZRtgkMkEq", PasswordOption.SendPlainText);
             ws.SetClientCredential(token);
             ws.SetPolicy("ClientPolicy");
@@ -38,6 +42,12 @@ namespace SIRA_Notificaciones.dal
         {
             wsSira.InformacionDeIngresoSimple objEntradaSimple = new wsSira.InformacionDeIngresoSimple();
             wsSira.respuesta objRespuesta = new wsSira.respuesta();
+
+            /*using (OperationContextScope scope = new OperationContextScope((IContextChannel)objEntradaSimple))
+            {
+                MessageHeader aMessageHeader = MessageHeader.CreateHeader("MyTimestamp", "http://tempuri.org", DateTime.Now.ToString("yyyyMMddHHmmssffff"));
+                OperationContext.Current.OutgoingMessageHeaders.Add(aMessageHeader);
+            }*/
 
             try
             {
@@ -87,8 +97,8 @@ namespace SIRA_Notificaciones.dal
             ICredentials credentials = new NetworkCredential("MAR870122MX9", "i1yzMzAa3RvVgMzNAmTnL0hvVmSRTYDOpmuTrO0+REFMnCTj+k+LFHmZRtgkMkEq", "https://*");
             ws.Credentials = credentials;
             UsernameToken token = new UsernameToken("MAR870122MX9", "i1yzMzAa3RvVgMzNAmTnL0hvVmSRTYDOpmuTrO0+REFMnCTj+k+LFHmZRtgkMkEq", PasswordOption.SendPlainText);
-            ws.SetClientCredential(token);
-            ws.SetPolicy("ClientPolicy");
+            //ws.SetClientCredential(token);
+            //ws.SetPolicy("ClientPolicy");
             ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
 
             try

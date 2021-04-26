@@ -144,7 +144,7 @@ namespace SIRA_Notificaciones
             timer.AutoReset = true;
             timer.Enabled = configuracionNotificador.timerActivo;
             siraPeticiones s = new siraPeticiones();
-            //s.pruebaSimple(); // prueba de ingreso simple
+            s.pruebaSimple(); // prueba de ingreso simple
             s.IngresoSinID();
             s.IngresoParcial();
         }

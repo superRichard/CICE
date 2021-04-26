@@ -210,9 +210,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wsSira\OperacionEntradaService.wsdl">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Web References\wsSira\OperacionEntradaService.wsdl" />
     <None Include="Web References\wsSira\OperacionEntradaService.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -221,7 +219,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wsSira\respuesta1.datasource">
+    <None Include="Web References\wsSira\respuesta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
