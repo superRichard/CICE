@@ -144,10 +144,14 @@ namespace SIRA_Notificaciones
             timer.AutoReset = true;
             timer.Enabled = configuracionNotificador.timerActivo;
             siraPeticiones s = new siraPeticiones();
-            s.pruebaSimple(); // prueba de ingreso simple
-            s.IngresoSinID();
-            s.IngresoParcial();
+            //s.ingresoSimple(); // prueba de ingreso simple
+            //s.ingresoSinID();
+            //s.ingresoParcial();
+            //s.confirmacionDeSalida();
+            //s.ingresosParciales();
+            s.confirmacionDeSalida();
         }
+
 
         public static void StopTimer() {
             try
@@ -186,7 +190,7 @@ namespace SIRA_Notificaciones
                 switch (nombreMetodo)
                 {
                     case "ingresoSimple":
-                        siraPeticion.IngresoSimple();
+                        siraPeticion.ingresoSimple();
                         Console.WriteLine("---> Ejecutó ingresoSimple");
                         break;
                         //case "ingresoParcial":
